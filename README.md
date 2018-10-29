@@ -1,5 +1,4 @@
 # Sypniewski_GEOG678
-Jaimlyn Sypniewski
 | Homeworks | Labs      | Project   |
 |:---------:|:---------:|:---------:|
 |[week1] (homework/week1/README.md)|[week1] (lab/week1/README.md)|           |
