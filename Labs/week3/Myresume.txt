@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This is My Web Resume</title>
+		<style>
+		.content{
+		max-width: 500px;
+		margin: auto;
+		}
+		
+		h2{
+		color:Blue;
+		font-family: Arial
+		font-size: 20px
+		}
+		
+		#MakeitDiff{
+		color:red;}
+		
+		#Skills{
+		color:green;}
+		
+		#Achievement{
+		color:maroon;}
+		
+		</style>
+	</head>
+		<body>
+		<div class="content">
+		<!-- Page content -->
+		
+	<img src="https://www.dcccd.edu/services/Academic-Support/transfer-services/publishingimages/transfer-logos_TAMU.png"
+					alt="This is the TAMY logo">
+			<h1> Jaimlyn Sypniewski<h1>
+				<h3 style="text-align:Left;">
+					<a href="http://www.tamug.edu/mars/faculty-bios/SamuelDavidBrody.html">
+					Click here to learn about my main professor </a>
+				</h3>
+			<h2>Education</h2>
+				<ul>
+					<li>M.Sc., Marine Rsourcces Management, Texas A&M Universtiy, Galveston TX. Current
+					<li>B.Sc., Environment and Society, University of Alaska, Anchorage, Alaska, 2014
+				</ul>
+			<h2 id="MakeitDiff">Experience</h2>
+				<p> I am currently a MSc student at Texas A&M University studying the effects of sounds walls on residential flooding. <br><br>
+				I am currently a student in GEOG 478 WEBGIS</p>
+			<h2 id="Skills">Skill</h2>
+				<ul>
+					<li>GitHub
+					<li>Python
+					<li>CSS and HTML
+					<li> Mobil Application	
+					<li>Javascript</li>
+				</ul>
+		<h2 id="Achievement">Achievement</h2>
+			<ul>
+				<li> Completed Intoduction to HTML
+				<a href="https://github.com/Jaimlyn/Sypniewski_GEOG678/blob/master/Labs/week3/HtmlCompletion.JPG">
+				Completion Certificate</a>
+				<li> Completed CSS basic Training
+				<a href="https://github.com/Jaimlyn/Sypniewski_GEOG678/blob/master/Labs/week3/CSSCompletion.JPG">
+				Completion Certificate</a></li>
+			</ul>
+			</div>
+	
+		</body>
+</html>
