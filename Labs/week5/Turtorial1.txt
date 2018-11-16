@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using GeoJSON with Leaflet</title>
+  </head>
+  <body></body>
+</html>
