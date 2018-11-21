@@ -1,0 +1,26 @@
+window.i18n = null;
+window.engStrings = null;
+
+require([
+  'dojo/i18n!nls/app.js?v=' + app.cfg.version,
+  'dojo/_base/kernel',
+  'Handlebars',
+  'my/MyStories',
+  'my/helpers/EngStrings',
+  'dojo/domReady!'
+],
+function(
+  i18nApp,
+  kernel,
+  Handlebars,
+  MyStories,
+  engStringsObj
+) {
+  window.i18n = i18nApp;
+  window.Handlebars = Handlebars;
+  // do this here since it's needed everywhere...
+  app.cfg.isEnglish = kernel.locale === 'en-us' || kernel.locale === 'en';
+
+  window.engStrings = engStringsObj;
+  MyStories.init();
+});

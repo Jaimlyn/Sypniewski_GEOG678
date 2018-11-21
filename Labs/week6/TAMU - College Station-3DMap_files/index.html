@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://tamu.maps.arcgis.com/apps/MyStories/index.html?fromBuilder&locale=en-us -->
+<html class="builder dj_webkit dj_chrome dj_contentbox has-webkit has-no-quirks"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>My Stories</title>
+
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="My Stories lets you administer and manage the story maps you have created using the story map applications">
+
+	<link type="image/ico" rel="shortcut icon" href="https://tamu.maps.arcgis.com/apps/MyStories/assets/images/my-stories/favicon.ico">
+	<link type="image/ico" rel="icon" href="https://tamu.maps.arcgis.com/apps/MyStories/assets/images/my-stories/favicon.ico">
+
+	<link rel="stylesheet" href="./site.css">
+	<link rel="stylesheet" type="text/css" href="./my-stories.css">
+<link type="text/css" rel="stylesheet" href="./dgrid.css"></head>
+<body>
+	<div id="builder-loading" style="display: none;"><h2 class="progress-title">Loading...</h2><div class="loader"><span class="side side-left"><span class="fill"></span></span><span class="side side-right"><span class="fill"></span></span></div></div>
+	<header id="my-stories-header"></header>
+
+	<div id="sign-in-container" class="custom-modal-container">
+		<div id="sign-in-unavailable-wrapper" class="dialog-unavailable custom-modal-wrapper"></div>
+	</div>
+
+	<section id="list-container" style="height: auto;">
+		<div id="new-stories-notification" class="container row-shrunk row-faded"></div>
+		<div id="scan-all-progress" class="progress-item container"></div>
+		<ul id="item-list" class="container"></ul>
+		<div id="ms-sign-in-message"></div>
+		<div id="page-loader" class="loading-container leader-2 trailer-2">
+			<h2 class="progress-title">&nbsp;</h2>
+			<div class="loader">
+				<span class="side side-left"><span class="fill"></span></span>
+				<span class="side side-right"><span class="fill"></span></span>
+			</div>
+		</div>
+		<div id="error-container" class="container leader-2 trailer-2" style="display: none;"></div>
+		<div id="find-more-container" class="container"></div>
+	</section>
+	<div id="builder-container" style="display: block;"><div id="builder-story" data-index="0" data-id="e5c40014c97a4058b63f7e4fbf289e5b" data-story-type="Map Journal" data-owner="jaimlyn1272" class="item row expanded">
+	<div class="item-side-buttons column-6 expandable">
+		<div class="notification-container"></div>
+		<div class="status-pane-container"><div class="notification-pane success">
+	<div class="notification-title">		
+		<h5 class="item-subtitle">No issues found</h5><!--
+	 --><div class="refresh-tooltip-container tooltip above bound-hover">
+			<div class="refresh icon-refresh server-button"></div>
+			<div class="tooltip-wrapper">
+				<span class="tooltip-content">Check your story again</span>
+			</div>
+		</div>
+	</div>
+</div></div>
+	</div>
+	<div class="item-text column-18 container">
+		<div class="item-content-container expandable row">
+			<div class="content-tabs-container media row trailer-1"><div class="content-tabs toggle media-tabs">
+		<div class="content-tab media-tab left active" data-media-type="images" data-tab-type="images">
+			<h3 class="item-subtitle content-tab-title">Images</h3>
+				<div class="loader" style="display: none;">
+					 <span class="side side-left"><span class="fill"></span></span>
+					 <span class="side side-right"><span class="fill"></span></span>
+				</div>
+		</div>
+		<div class="content-tab media-tab left" data-media-type="webpages" data-tab-type="webpages">
+			<h3 class="item-subtitle content-tab-title">Webpages</h3>
+				<div class="loader" style="display: none;">
+					 <span class="side side-left"><span class="fill"></span></span>
+					 <span class="side side-right"><span class="fill"></span></span>
+				</div>
+		</div>
+		<div class="content-tab media-tab right" data-tab-type="tags">
+			<h3 class="item-subtitle content-tab-title">Tags</h3>
+		</div>
+</div>
+<div class="sharing-alert-container column-12">
+	<div class="alert sharing-alert">
+		<h4 class="sharing-alert-text"></h4>
+	</div>
+</div>
+</div>
+			<div>
+				<div class="item-table-container row" data-media-type="maps" data-tab-type="maps">
+					<div class="loading-container content-loader map-content-loader padding-leader-1 padding-trailer-1">
+						<h2 class="progress-title">Loading...</h2>
+						<div class="loader">
+						   <span class="side side-left"><span class="fill"></span></span>
+						   <span class="side side-right"><span class="fill"></span></span>
+						</div>
+					</div>
+					<div class="maps-tab-error no-show">
+						<h2>Unable to retrieve maps</h2>
+						<p>We weren't able to retrieve maps for this story map.</p>
+					</div>
+					<div class="item-media-container maps-container"></div>
+				</div>
+				<div class="item-table-container row" data-media-type="scenes" data-tab-type="scenes">
+					<div class="loading-container content-loader scenes-content-loader padding-leader-1 padding-trailer-1">
+						<h2 class="progress-title">Loading...</h2>
+						<div class="loader">
+						   <span class="side side-left"><span class="fill"></span></span>
+						   <span class="side side-right"><span class="fill"></span></span>
+						</div>
+					</div>
+					<div class="item-media-container scenes-container"></div>
+				</div>
+				<div class="item-table-container row active" data-media-type="images" data-tab-type="images">
+					<div class="loading-container content-loader image-content-loader padding-leader-1 padding-trailer-1" style="display: none;">
+						<h2 class="progress-title">Loading...</h2>
+						<div class="loader">
+						   <span class="side side-left"><span class="fill"></span></span>
+						   <span class="side side-right"><span class="fill"></span></span>
+						</div>
+					</div>
+					<div class="image-tab-error no-show">
+						<h2>No images found</h2>
+						<p>No images were found in this story.</p>
+					</div>
+					<div class="item-media-container images-container"><table class="image-table content-table ">
+	<thead>
+		<tr>
+			<td class="column-2 item-status-column">Status</td>
+			<td class="column-10">URL</td>
+			<td class="source-title column-4">Source</td>
+				<td class="column-8">Section</td>
+		</tr>
+	</thead>
+	<tbody class="custom-scrollbar">
+		<tr class="media-row" data-id="//tamu.maps.arcgis.com/apps/MapJournal/resources/tpl/viewer/icons/esri-logo-white.png">
+			<td class="column-2 item-status-column">
+			  <div class="tooltip above bound-hover">
+			    <div class="media-item-status icon-stories-check ok"></div>
+			    <div class="tooltip-wrapper no-show">
+			      <div class="tooltip-content">
+			      </div>
+			    </div>
+			  </div>
+			</td>
+			<td class="media-title image column-10">
+			    <a href="https://tamu.maps.arcgis.com/apps/MapJournal/resources/tpl/viewer/icons/esri-logo-white.png" class="media-link" target="_blank">tamu.maps.arcgis.com/apps/MapJournal/resources/tpl/viewer/icons/esri-logo-white.png</a>
+			</td>
+			<td class="source column-4">
+			  <a href="https://tamu.maps.arcgis.com/apps/MapJournal/resources/tpl/viewer/icons/esri-logo-white.png" class="tooltip above sharing-status media image icon-link tall-icon bound-hover" target="_blank">
+			    <div class="tooltip-wrapper">
+			      <div class="tooltip-content">
+			        <span>Url</span>
+			      </div>
+			    </div>
+			  </a>
+			</td>
+			<td class="sections column-8">
+			    <div class="section-number logo">
+			      <span>Logo</span>
+			    </div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+				</div>
+				<div class="item-table-container row" data-media-type="videos" data-tab-type="videos">
+					<div class="loading-container content-loader video-content-loader padding-leader-1 padding-trailer-1">
+						<h2 class="progress-title">Loading...</h2>
+						<div class="loader">
+						   <span class="side side-left"><span class="fill"></span></span>
+						   <span class="side side-right"><span class="fill"></span></span>
+						</div>
+					</div>
+					<div class="item-media-container videos-container"></div>
+				</div>
+				<div class="item-table-container row" data-media-type="webpages" data-tab-type="webpages">
+					<div class="loading-container content-loader webpage-content-loader padding-leader-1 padding-trailer-1" style="display: none;">
+						<h2 class="progress-title">Loading...</h2>
+						<div class="loader">
+						   <span class="side side-left"><span class="fill"></span></span>
+						   <span class="side side-right"><span class="fill"></span></span>
+						</div>
+					</div>
+					<div class="item-media-container webpages-container"><table class="webpage-table content-table">
+	<thead>
+		<tr>
+			<td class="column-2 item-status-column">Status</td>
+			<td class="column-14">URL</td>
+			<td class="column-8">Section</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="media-row" data-id="https://tamu.maps.arcgis.com/home/webscene/viewer.html?layers=6af9596e6a6542b8bd71df845763698e">
+			<td class="column-2 item-status-column">
+				<div class="tooltip above bound-hover">
+					<div class="media-item-status icon-stories-warning warning"></div>
+					<div class="tooltip-wrapper">
+						<div class="tooltip-content">
+  								<span>Webpages are not checked for issues</span>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="media-title image column-14">
+				<a href="https://tamu.maps.arcgis.com/home/webscene/viewer.html?layers=6af9596e6a6542b8bd71df845763698e" class="media-link" target="_blank">tamu.maps.arcgis.com/home/webscene/viewer.html?layers=6af9596e6a6542b8bd71df845763698e</a>
+			</td>
+			<td class="sections column-8">
+						<div class="tooltip before section bound-hover">
+								<span class="section-link" data-type="main-stage" data-section-number="1">1<!--
+								 -->
+									
+									</span>
+							<div class="tooltip-wrapper">
+								<p class="tooltip-content">
+										TAMU - College Station
+								</p>
+							</div>
+						</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+				</div>
+		    <div class="item-table-container row" data-media-type="audio" data-tab-type="audio">
+					<div class="loading-container content-loader audio-content-loader padding-leader-1 padding-trailer-1">
+						<h2 class="progress-title">Loading...</h2>
+						<div class="loader">
+						   <span class="side side-left"><span class="fill"></span></span>
+						   <span class="side side-right"><span class="fill"></span></span>
+						</div>
+					</div>
+					<div class="item-media-container audio-container"></div>
+				</div>
+				<div class="item-table-container row" data-tab-type="tags">
+					<div class="tags-container"></div>
+				</div>
+			</div>
+			<div class="content-tab-error" style="display: none;">
+				<h2>Unable to find content</h2>
+				<p>We weren't able to retrieve the content for this story map.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+	<div id="modal-container-delete" class="modal-overlay"></div>
+	<div id="modal-container-share" class="modal-overlay"></div>
+	<div id="modal-container-image-picker" class="modal-overlay"></div>
+	<div id="modal-container-find-stories" class="modal-overlay"></div>
+	<div id="modal-container-create-story" class="modal-overlay">
+		<div id="create-story-modal" class="modal create-story-modal" data-modal="create-story"></div>
+		<div id="no-create-story-modal" class="dialog-unavailable custom-modal-wrapper"></div>
+	</div>
+	<div id="modal-container-remove-layer" class="modal-overlay"></div>
+	<div id="map-container-hidden"></div>
+
+	<script type="text/javascript" charset="utf-8" src="./jsapi_en-us.js.download"></script><script type="text/javascript" charset="utf-8" src="./VectorTileLayerImpl.js.download"></script><script type="text/javascript" charset="utf-8" src="./svg.js.download"></script><script type="text/javascript" charset="utf-8" src="./handlebars.runtime-v2.0.0.js.download"></script><script type="text/javascript" charset="utf-8" src="./ArcGISImageServiceLayer.js.download"></script><script type="text/javascript" charset="utf-8" src="./GeoRSSLayer.js.download"></script><script type="text/javascript" charset="utf-8" src="./AppProxyManager.js.download"></script><script type="text/javascript" charset="utf-8" src="./AppProxySettings.js.download"></script><script type="text/javascript" charset="utf-8" src="./KMLLayer.js.download"></script><script type="text/javascript" charset="utf-8" src="./CSVLayer.js.download"></script><script type="text/javascript" charset="utf-8" src="./WMSLayer.js.download"></script><script type="text/javascript" charset="utf-8" src="./WMSLayerInfo.js.download"></script><script type="text/javascript" charset="utf-8" src="./Portal.js.download"></script><script type="text/javascript" charset="utf-8" src="./app.js.download"></script><script type="text/javascript" charset="utf-8" src="./app.js(1).download"></script><script type="text/javascript" charset="utf-8" src="./app.js(2).download"></script><script type="text/javascript" charset="utf-8" src="./VectorTileLayerImpl_en-us.js.download"></script><script type="text/javascript" charset="utf-8" src="./filters.js.download"></script><script type="text/javascript" charset="utf-8" src="./svgext.js.download"></script><script type="text/javascript" charset="utf-8" src="./CheckBox.js.download"></script><script type="text/javascript" charset="utf-8" src="./Select.js.download"></script><script type="text/javascript" charset="utf-8" src="./NumberSpinner.js.download"></script><script type="text/javascript" charset="utf-8" src="./OnDemandGrid.js.download"></script><script type="text/javascript" charset="utf-8" src="./editor.js.download"></script><script type="text/javascript" charset="utf-8" src="./_FormSelectWidget.js.download"></script><script type="text/javascript" charset="utf-8" src="./DropDownMenu.js.download"></script><script type="text/javascript" charset="utf-8" src="./MenuItem.js.download"></script><script type="text/javascript" charset="utf-8" src="./MenuSeparator.js.download"></script><script type="text/javascript" charset="utf-8" src="./_KeyNavMixin.js.download"></script><script type="text/javascript" charset="utf-8" src="./Grid.js.download"></script><script type="text/javascript" charset="utf-8" src="./put.js.download"></script><script type="text/javascript" charset="utf-8" src="./_Spinner.js.download"></script><script type="text/javascript" charset="utf-8" src="./NumberTextBox.js.download"></script><script type="text/javascript" charset="utf-8" src="./_CheckBoxMixin.js.download"></script><script type="text/javascript" charset="utf-8" src="./OnDemandList.js.download"></script><script type="text/javascript" charset="utf-8" src="./_MenuBase.js.download"></script><script type="text/javascript" charset="utf-8" src="./_Contained.js.download"></script><script type="text/javascript" charset="utf-8" src="./List.js.download"></script><script type="text/javascript" charset="utf-8" src="./misc.js.download"></script><script type="text/javascript" charset="utf-8" src="./RangeBoundTextBox.js.download"></script><script type="text/javascript" charset="utf-8" src="./_StoreMixin.js.download"></script><script type="text/javascript" charset="utf-8" src="./_KeyNavContainer.js.download"></script><script type="text/javascript" charset="utf-8" src="./MappedTextBox.js.download"></script><script type="text/javascript" charset="utf-8" src="./has-class.js.download"></script><script type="text/javascript" charset="utf-8" src="./css.js.download"></script><script type="text/javascript" charset="utf-8" src="./load-css.js.download"></script><script type="text/javascript" charset="utf-8" src="./RadioButton.js.download"></script><script type="text/javascript" charset="utf-8" src="./_RadioButtonMixin.js.download"></script><script type="text/javascript" charset="utf-8" src="./lite.js.download"></script><script>
+		window.builderIntegration = window.location.href.indexOf('fromBuilder') !== -1;
+
+		if(window.builderIntegration) {
+			document.getElementsByTagName('html')[0].className += ' builder';
+
+			// load here...
+			var htmlString = '<h2 class="progress-title">&nbsp;</h2>' +
+			'<div class="loader">' +
+				'<span class="side side-left"><span class="fill"></span></span>' +
+				'<span class="side side-right"><span class="fill"></span></span>' +
+			'</div>';
+
+			document.getElementById('builder-loading').innerHTML = htmlString;
+		}
+
+
+		// the rest of app.cfg is added to in app/config.js
+		var app = {
+			// Version number after this manner: http://semver.org/
+			version: '1.14.1'
+		};
+
+	</script>
+	<script src="./config.js(2).download"></script><script src="./init.js.download"></script><script src="./my-stories-min.js.download"></script><script src="./main-app.js(1).download"></script>
+
+
+</body></html>

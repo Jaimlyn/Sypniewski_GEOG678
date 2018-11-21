@@ -1,0 +1,151 @@
+(function() {
+	var isWebsiteDomain = function(hostname) {
+		return hostname === 'storymaps.arcgis.com' ||
+			hostname === 'storymapsdev.arcgis.com' ||
+			hostname === 'storymapsstg.arcgis.com';
+	};
+
+	/**
+	 * @summary Determines the dojoLocale. Since Dojo smartly figures out locale based on browser settings,
+	 * we only override those here when specific parameters are passed in.
+	 */
+	var determineLocale = function(urlLocation, langAttribute) {
+		// if it's on the Story Maps website, use the HTML lang attribute to override.
+		var isOnWebsite = isWebsiteDomain(urlLocation.hostname);
+		if (isOnWebsite) {
+			return langAttribute || '';
+		}
+		// otherwise (AGOL/Portal hosted), use any locale URL parameter to override.
+		else if (urlLocation.search.match(/locale=([\w\-]+)/)) {
+			return RegExp.$1;
+		}
+		// otherwise return empty string (DOJO will figure out which language to use for us)
+		else {
+			return '';
+		}
+	};
+
+	if (!window.app) {
+		window.app = {};
+	}
+
+	app.cfg = {
+		version: app.version,
+		isProduction: true,
+		jsApiUrl: 'https://js.arcgis.com/3.26/init.js',
+		facebook: {
+			appId: '276669785846752'
+		},
+		bitly: {
+			login: 'esristorymaps',
+			key: 'R_14fc9f92e48f7c78c21db32bd01f7014'
+		},
+		isEnglish: false,
+		TIMEOUT_MILLISECONDS: 15000,
+		scanNetworkManager: null,
+		proxyNetworkManager: null,
+		CONCURRENT_SCAN_REQUESTS: 8,
+		CONCURRENT_PROXY_REQUESTS: 1,
+		cacheManager: null,
+		DEFAULT_PORTAL_URL: window.location.href.indexOf('env=devQA') !== -1 ? 'devext.arcgis.com' : 'www.arcgis.com',
+		DEFAULT_CLIENT_ID: 'arcgisonline',
+		defaultBasicTemplateURL: '//storymaps.arcgis.com/en/app-list/basic/tutorial/',
+		isSignedInPortal: false,
+		isOnWebsite: isWebsiteDomain(window.location.hostname),
+		folderWebApps: null
+	};
+
+	var path = location.pathname.replace(/\/[^/]+$/, '/');
+  var builtPath = location.pathname.replace(/\/src\/[^/]*$/, '/') + 'build/';
+
+	var loadJS = function(url, isExternal) {
+		var script = document.createElement('script');
+
+		if (isExternal) {
+			url = document.location.protocol == 'file:' ? 'http:' + url : url;
+		}
+		else {
+			url += '?v=' + app.cfg.version + (!app.cfg.isProduction ? '&_=' + new Date().getTime() : '');
+		}
+
+		script.src = url;
+		script.async = false;
+
+		document.body.appendChild(script);
+	};
+
+	window.dojoConfig = {
+		parseOnLoad: true,
+		isDebug: false,
+		useDeferredInstrumentation: true,
+		cacheBust: false,
+		packages: [
+			{
+				name: 'my',
+				location: path + 'app/my'
+			},
+      {
+        name: 'builtMy',
+        location: builtPath + 'app/my'
+      },
+			{
+				name: 'nls',
+				location: path + 'resources/nls'
+			},
+			{
+				name: 'lib-app',
+				location: path + 'lib-app'
+			},
+			{
+				name: 'lib-build',
+				location: path + 'lib-build'
+			},
+			{
+				name: 'assets',
+				location: path + 'assets'
+			},
+			{
+				name: 'create-app',
+				location: path + 'arcgis-storymaps-my-stories-utils/create-app'
+			},
+			{
+				name: 'sign-in',
+				location: path + 'arcgis-storymaps-my-stories-utils/sign-in'
+			},
+      {
+        name: 'issue-checker',
+        location: builtPath + 'issue-checker/src'
+      }
+		],
+		aliases: [
+			['text', 'lib-build/text']
+		],
+		locale: determineLocale(window.location, document.documentElement.getAttribute('lang'))
+	};
+
+	if (app.cfg.isProduction) {
+		window.dojoConfig.aliases.push(['Handlebars', 'assets/js/libs/handlebars.runtime-v2.0.0.js']);
+	}
+	else {
+		window.dojoConfig.aliases.push(['Handlebars', 'assets/js/libs/handlebars-v2.0.0.js']);
+	}
+
+  // load es6 polyfills if the browser does not support these methods/objects
+  if (
+    !('Promise' in window) ||
+    !('assign' in window.Object) ||
+    !('map' in window.Array.prototype) ||
+    !('Symbol' in window)
+  ) {
+    loadJS(path + 'assets/js/libs/core-js-custom.min.js');
+  }
+
+	loadJS(app.cfg.jsApiUrl, true);
+
+
+	if(app.cfg.isProduction) {
+		loadJS(path + 'app/my-stories-min.js');
+	}
+
+	loadJS(path + 'app/main-app.js');
+})();

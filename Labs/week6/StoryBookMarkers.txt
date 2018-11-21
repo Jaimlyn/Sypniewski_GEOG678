@@ -1,0 +1,5 @@
+Latitude	Longitude	Name			
+52.97163	-9.430879	Cliffs of Moher			
+53.561983	-9.888079	Kylemore Abby			
+51.929052	-8.57111	Blarney Castle			
+53.36934	-7.503217	Kilbeggin Distillery 			

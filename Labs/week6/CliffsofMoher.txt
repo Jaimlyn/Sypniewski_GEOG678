@@ -1,0 +1,2 @@
+Latitude	Longitude	Name
+52.97163	-9.430879	Cliffs of Moher

@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.9/esri/copyright.txt for details.
+//>>built
+define("require exports dojo/i18n!webSceneViewer/nls/viewer esri/views/support/WebGLRequirements ../widgets/Dialog/Dialog esri/core/promiseUtils ./portalUtils".split(" "),function(n,c,b,l,m,g,d){function h(a){return'\x3ca class\x3d"link" target\x3d"_blank" href\x3d\''+a+"'\x3e"+b.webglMessages.learnMore+"\x3c/a\x3e"}function k(a,e){void 0===e&&(e="120000966");var c=d.defaultHelpUrl,f=new m({title:b.dialogs.browserProblem,content:a,details:h(d.defaultHelpUrl),draggable:!1,autoCenter:!0});f.execute=
+function(){window.location.href=c};d.getPortalUrls(e).then(function(a){f.set("details",h(a.helpUrl));f.execute=function(){window.location.href=a.returnUrl}})}Object.defineProperty(c,"__esModule",{value:!0});c.checkSupportedAndShowError=function(){var a=l.check();return null!==a?("webgl:major-performance-caveat-detected"===a.name?k(""+b.webglMessages.softwareRendering,"120001255"):k(b.webglMessages.badbrowser+" "+b.webglMessages.troubleshoot,"120001256"),g.reject()):g.resolve()}});
