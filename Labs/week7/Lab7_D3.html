@@ -84,6 +84,14 @@ fill: white
 text.source {
   font-size: 10px;
 }
+
+.bar1 {
+  fill: steelblue;
+}
+
+.bar2 {
+  fill: orange;
+}
 	</style>
   </head>
 	 <body>
@@ -97,45 +105,53 @@ text.source {
 
 	</body>
 	<script>
- var sample = [
+var sample = [
       {
         day: 'Sat',
-        temperature: 82, 
+        low: 67,
+		high: 82,
         color: '#000000'
       },
       {
         day: 'Sun',
-        temperature: 81,
+        low: 59,
+		high: 81,
         color: '#00a2ee'
       },
       {
         day: 'Mon',
-        temperature: 81,
+        low: 50,
+		high: 81,
         color: '#fbcb39'
       },
       {
         day: 'Tues',
-        temperature: 70,
+        low: 47,
+		high: 70,
         color: '#007bc8'
       },
       {
         day: 'Wed',
-        temperature: 77,
+        low: 51,
+		high: 77,
         color: '#65cedb'
       },
       {
         day: 'Thurs',
-        temperature: 78,
+        low: 60,
+		high: 78,
         color: '#ff6e52'
       },
       {
         day: 'Fri',
-        temperature: 79,
+        low: 66,
+		high: 79,
         color: '#f9de3f'
       },
       {
         day: 'Saturday',
-        temperature: 80,
+        low: 66,
+		high: 80,
         color: '#507dca'
       }
     ];
@@ -189,16 +205,24 @@ text.source {
         .tickFormat('')
       )
 	  
+	  bars = chart.selectAll()
+		.data(sample)
+		.enter()
+	  
 	
-	chart.selectAll()
-    .data(sample)
-    .enter()
-    .append('rect')
-    .attr('x', (s) => xScale(s.day))
-    .attr('y', (s) => yScale(s.temperature))
-    .attr('height', (s) => height - yScale(s.temperature))
-    .attr('width', xScale.bandwidth())
-	
+  bars.append("rect")
+		.attr("class", "bar1")
+		.attr('x', (s) => xScale(s.day))
+		.attr('y', (s) => yScale(s.low))
+		.attr('height', (s) => height - yScale(s.low))
+		.attr('width', xScale.bandwidth()/2)
+
+  bars.append("rect")
+		.attr("class", "bar2")
+		.attr('x', (s) => xScale(s.day) + xScale.bandwidth()/2)
+		.attr('y', (s) => yScale(s.high))
+		.attr('height', (s) => height - yScale(s.high))
+		.attr('width', xScale.bandwidth()/2)
 	
 
 chart.append('g')
