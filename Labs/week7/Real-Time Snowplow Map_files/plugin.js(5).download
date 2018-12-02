@@ -1,0 +1,3 @@
+CKEDITOR.plugins.add("fields",{requires:"richcombo",init:function(i){var n=i.config.fields||[]
+i.ui.addRichCombo("Fields",{label:"{.}",title:"",className:"cke_format",multiSelect:!1,panel:{css:[i.config.contentsCss,CKEDITOR.skin.getPath("editor")]},init:function(){n.forEach(function(i){var n='<div class="margin-right-half">'+(i.alias||i.name)+'</div><div class="font-size--3"><i>{'+i.name+"}</i></div>"
+this.add(i.name,n,i.name)},this)},onClick:function(n){i.focus(),i.fire("saveSnapshot"),i.insertHtml("{"+n+"}"),i.fire("saveSnapshot")}})}})
